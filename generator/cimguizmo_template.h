@@ -41,7 +41,8 @@ typedef unsigned __int64 ImU64;
 #ifdef CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 #include "imgui_structs.h"
 #else
-
+typedef ImGuizmo::OPERATION OPERATION;
+typedef ImGuizmo::MODE MODE;
 #endif // CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 
 #include "auto_funcs.h"

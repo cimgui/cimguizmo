@@ -42,8 +42,19 @@ typedef unsigned __int64 ImU64;
 
 #ifdef CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 
+typedef enum {
+  TRANSLATE,
+  ROTATE,
+  SCALE,
+  BOUNDS,
+ }OPERATION;
+typedef enum {
+  LOCAL,
+  WORLD
+ }MODE;
 #else
-
+typedef ImGuizmo::OPERATION OPERATION;
+typedef ImGuizmo::MODE MODE;
 #endif // CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 
 #ifndef CIMGUI_DEFINE_ENUMS_AND_STRUCTS
