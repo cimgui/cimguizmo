@@ -53,11 +53,11 @@ typedef enum {
   WORLD
  }MODE;
 #else
-typedef ImGuizmo::OPERATION OPERATION;
-typedef ImGuizmo::MODE MODE;
 #endif // CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 
 #ifndef CIMGUI_DEFINE_ENUMS_AND_STRUCTS
+typedef ImGuizmo::MODE MODE;
+typedef ImGuizmo::OPERATION OPERATION;
 #endif //CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 CIMGUI_API void ImGuizmo_SetDrawlist(void);
 CIMGUI_API void ImGuizmo_BeginFrame(void);
