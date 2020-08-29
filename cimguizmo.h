@@ -61,7 +61,7 @@ typedef ImGuizmo::OPERATION OPERATION;
 #endif //CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 CIMGUI_API void ImGuizmo_SetDrawlist(void);
 CIMGUI_API void ImGuizmo_BeginFrame(void);
-CIMGUI_API bool ImGuizmo_IsOver(void);
+CIMGUI_API bool ImGuizmo_IsOverNil(void);
 CIMGUI_API bool ImGuizmo_IsUsing(void);
 CIMGUI_API void ImGuizmo_Enable(bool enable);
 CIMGUI_API void ImGuizmo_DecomposeMatrixToComponents(const float* matrix,float* translation,float* rotation,float* scale);
@@ -73,6 +73,7 @@ CIMGUI_API void ImGuizmo_DrawGrid(const float* view,const float* projection,cons
 CIMGUI_API void ImGuizmo_Manipulate(const float* view,const float* projection,OPERATION operation,MODE mode,float* matrix,float* deltaMatrix,float* snap,float* localBounds,float* boundsSnap);
 CIMGUI_API void ImGuizmo_ViewManipulate(float* view,float length,ImVec2 position,ImVec2 size,ImU32 backgroundColor);
 CIMGUI_API void ImGuizmo_SetID(int id);
+CIMGUI_API bool ImGuizmo_IsOverOPERATION(OPERATION op);
 
 
 

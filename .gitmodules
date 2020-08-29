@@ -1,3 +1,4 @@
 [submodule "ImGuizmo"]
 	path = ImGuizmo
-	url = https://github.com/CedricGuillemet/ImGuizmo
+	url = https://github.com/sonoro1234/ImGuizmo
+	branch = malloca

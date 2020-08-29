@@ -15,7 +15,7 @@ CIMGUI_API void ImGuizmo_BeginFrame()
 {
     return ImGuizmo::BeginFrame();
 }
-CIMGUI_API bool ImGuizmo_IsOver()
+CIMGUI_API bool ImGuizmo_IsOverNil()
 {
     return ImGuizmo::IsOver();
 }
@@ -62,6 +62,10 @@ CIMGUI_API void ImGuizmo_ViewManipulate(float* view,float length,ImVec2 position
 CIMGUI_API void ImGuizmo_SetID(int id)
 {
     return ImGuizmo::SetID(id);
+}
+CIMGUI_API bool ImGuizmo_IsOverOPERATION(OPERATION op)
+{
+    return ImGuizmo::IsOver(op);
 }
 
 

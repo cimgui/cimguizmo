@@ -145,9 +145,28 @@
       "defaults": [],
       "funcname": "IsOver",
       "namespace": "ImGuizmo",
-      "ov_cimguiname": "ImGuizmo_IsOver",
+      "ov_cimguiname": "ImGuizmo_IsOverNil",
       "ret": "bool",
       "signature": "()",
+      "stname": ""
+    },
+    {
+      "args": "(OPERATION op)",
+      "argsT": [
+        {
+          "name": "op",
+          "type": "OPERATION"
+        }
+      ],
+      "argsoriginal": "(OPERATION op)",
+      "call_args": "(op)",
+      "cimguiname": "ImGuizmo_IsOver",
+      "defaults": [],
+      "funcname": "IsOver",
+      "namespace": "ImGuizmo",
+      "ov_cimguiname": "ImGuizmo_IsOverOPERATION",
+      "ret": "bool",
+      "signature": "(OPERATION)",
       "stname": ""
     }
   ],
@@ -208,14 +227,14 @@
           "type": "float*"
         }
       ],
-      "argsoriginal": "(const float* view,const float* projection,OPERATION operation,MODE mode,float* matrix,float* deltaMatrix=0,float* snap=0,float* localBounds=NULL,float* boundsSnap=NULL)",
+      "argsoriginal": "(const float* view,const float* projection,OPERATION operation,MODE mode,float* matrix,float* deltaMatrix=NULL,float* snap=NULL,float* localBounds=NULL,float* boundsSnap=NULL)",
       "call_args": "(view,projection,operation,mode,matrix,deltaMatrix,snap,localBounds,boundsSnap)",
       "cimguiname": "ImGuizmo_Manipulate",
       "defaults": {
         "boundsSnap": "NULL",
-        "deltaMatrix": "0",
+        "deltaMatrix": "NULL",
         "localBounds": "NULL",
-        "snap": "0"
+        "snap": "NULL"
       },
       "funcname": "Manipulate",
       "namespace": "ImGuizmo",
