@@ -35,6 +35,9 @@
       }
     ]
   },
-  "locations": [],
+  "locations": {
+    "MODE": "ImGuizmo:167",
+    "OPERATION": "ImGuizmo:159"
+  },
   "structs": []
 }

@@ -27,6 +27,8 @@ defs["enums"]["OPERATION"][4]["calc_value"] = 3
 defs["enums"]["OPERATION"][4]["name"] = "BOUNDS"
 defs["enums"]["OPERATION"][4]["value"] = 3
 defs["locations"] = {}
+defs["locations"]["MODE"] = "ImGuizmo:167"
+defs["locations"]["OPERATION"] = "ImGuizmo:159"
 defs["structs"] = {}
 
 return defs

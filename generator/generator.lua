@@ -138,19 +138,9 @@ local function parseImGuiHeader(header,names)
 	
 	local include_cmd = COMPILER=="cl" and [[ /I ]] or [[ -I ]]
 	local extra_includes = include_cmd.." ../../cimgui/imgui "
-	local pipe,err = io.popen(CPRE..extra_includes..header,"r")
-
-	if not pipe then
-		error("could not execute COMPILER "..err)
-	end
 	
-	local iterator = cpp2ffi.location
+	parser:take_lines(CPRE..extra_includes..header, names, COMPILER)
 	
-	for line,loca,loca2 in iterator(pipe,names,{},COMPILER) do
-		parser:insert(line, loca)
-	end
-
-	pipe:close()
 	return parser
 end
 --generation
@@ -188,4 +178,6 @@ save_data("./output/typedefs_dict.json",json.encode(parser1.typedefs_dict))
 -------------------copy C files to repo root
 copyfile("./output/"..modulename..".h", "../"..modulename..".h")
 copyfile("./output/"..modulename..".cpp", "../"..modulename..".cpp")
+os.remove("./output/"..modulename..".h")
+os.remove("./output/"..modulename..".cpp")
 print"all done!!"
