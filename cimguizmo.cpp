@@ -7,9 +7,9 @@
 
 
 
-CIMGUI_API void ImGuizmo_SetDrawlist()
+CIMGUI_API void ImGuizmo_SetDrawlist(ImDrawList* drawlist)
 {
-    return ImGuizmo::SetDrawlist();
+    return ImGuizmo::SetDrawlist(drawlist);
 }
 CIMGUI_API void ImGuizmo_BeginFrame()
 {
@@ -51,7 +51,7 @@ CIMGUI_API void ImGuizmo_DrawGrid(const float* view,const float* projection,cons
 {
     return ImGuizmo::DrawGrid(view,projection,matrix,gridSize);
 }
-CIMGUI_API void ImGuizmo_Manipulate(const float* view,const float* projection,OPERATION operation,MODE mode,float* matrix,float* deltaMatrix,float* snap,float* localBounds,float* boundsSnap)
+CIMGUI_API bool ImGuizmo_Manipulate(const float* view,const float* projection,OPERATION operation,MODE mode,float* matrix,float* deltaMatrix,float* snap,float* localBounds,float* boundsSnap)
 {
     return ImGuizmo::Manipulate(view,projection,operation,mode,matrix,deltaMatrix,snap,localBounds,boundsSnap);
 }
