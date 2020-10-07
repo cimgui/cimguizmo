@@ -4,34 +4,34 @@
       {
         "calc_value": 0,
         "name": "LOCAL",
-        "value": 0
+        "value": "0"
       },
       {
         "calc_value": 1,
         "name": "WORLD",
-        "value": 1
+        "value": "1"
       }
     ],
     "OPERATION": [
       {
         "calc_value": 0,
         "name": "TRANSLATE",
-        "value": 0
+        "value": "0"
       },
       {
         "calc_value": 1,
         "name": "ROTATE",
-        "value": 1
+        "value": "1"
       },
       {
         "calc_value": 2,
         "name": "SCALE",
-        "value": 2
+        "value": "2"
       },
       {
         "calc_value": 3,
         "name": "BOUNDS",
-        "value": 3
+        "value": "3"
       }
     ]
   },
