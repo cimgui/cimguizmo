@@ -43,15 +43,15 @@ typedef unsigned __int64 ImU64;
 #ifdef CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 
 typedef enum {
-  TRANSLATE,
-  ROTATE,
-  SCALE,
-  BOUNDS,
- }OPERATION;
+      TRANSLATE,
+      ROTATE,
+      SCALE,
+      BOUNDS,
+   }OPERATION;
 typedef enum {
-  LOCAL,
-  WORLD
- }MODE;
+      LOCAL,
+      WORLD
+   }MODE;
 #else
 #endif // CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 
@@ -61,6 +61,7 @@ typedef ImGuizmo::OPERATION OPERATION;
 #endif //CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 CIMGUI_API void ImGuizmo_SetDrawlist(ImDrawList* drawlist);
 CIMGUI_API void ImGuizmo_BeginFrame(void);
+CIMGUI_API void ImGuizmo_SetImGuiContext(ImGuiContext* ctx);
 CIMGUI_API bool ImGuizmo_IsOverNil(void);
 CIMGUI_API bool ImGuizmo_IsUsing(void);
 CIMGUI_API void ImGuizmo_Enable(bool enable);
@@ -70,10 +71,11 @@ CIMGUI_API void ImGuizmo_SetRect(float x,float y,float width,float height);
 CIMGUI_API void ImGuizmo_SetOrthographic(bool isOrthographic);
 CIMGUI_API void ImGuizmo_DrawCubes(const float* view,const float* projection,const float* matrices,int matrixCount);
 CIMGUI_API void ImGuizmo_DrawGrid(const float* view,const float* projection,const float* matrix,const float gridSize);
-CIMGUI_API bool ImGuizmo_Manipulate(const float* view,const float* projection,OPERATION operation,MODE mode,float* matrix,float* deltaMatrix,float* snap,float* localBounds,float* boundsSnap);
+CIMGUI_API bool ImGuizmo_Manipulate(const float* view,const float* projection,OPERATION operation,MODE mode,float* matrix,float* deltaMatrix,const float* snap,const float* localBounds,const float* boundsSnap);
 CIMGUI_API void ImGuizmo_ViewManipulate(float* view,float length,ImVec2 position,ImVec2 size,ImU32 backgroundColor);
 CIMGUI_API void ImGuizmo_SetID(int id);
 CIMGUI_API bool ImGuizmo_IsOverOPERATION(OPERATION op);
+CIMGUI_API void ImGuizmo_SetGizmoSizeClipSpace(float value);
 
 
 

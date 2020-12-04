@@ -15,6 +15,10 @@ CIMGUI_API void ImGuizmo_BeginFrame()
 {
     return ImGuizmo::BeginFrame();
 }
+CIMGUI_API void ImGuizmo_SetImGuiContext(ImGuiContext* ctx)
+{
+    return ImGuizmo::SetImGuiContext(ctx);
+}
 CIMGUI_API bool ImGuizmo_IsOverNil()
 {
     return ImGuizmo::IsOver();
@@ -51,7 +55,7 @@ CIMGUI_API void ImGuizmo_DrawGrid(const float* view,const float* projection,cons
 {
     return ImGuizmo::DrawGrid(view,projection,matrix,gridSize);
 }
-CIMGUI_API bool ImGuizmo_Manipulate(const float* view,const float* projection,OPERATION operation,MODE mode,float* matrix,float* deltaMatrix,float* snap,float* localBounds,float* boundsSnap)
+CIMGUI_API bool ImGuizmo_Manipulate(const float* view,const float* projection,OPERATION operation,MODE mode,float* matrix,float* deltaMatrix,const float* snap,const float* localBounds,const float* boundsSnap)
 {
     return ImGuizmo::Manipulate(view,projection,operation,mode,matrix,deltaMatrix,snap,localBounds,boundsSnap);
 }
@@ -66,6 +70,10 @@ CIMGUI_API void ImGuizmo_SetID(int id)
 CIMGUI_API bool ImGuizmo_IsOverOPERATION(OPERATION op)
 {
     return ImGuizmo::IsOver(op);
+}
+CIMGUI_API void ImGuizmo_SetGizmoSizeClipSpace(float value)
+{
+    return ImGuizmo::SetGizmoSizeClipSpace(value);
 }
 
 
