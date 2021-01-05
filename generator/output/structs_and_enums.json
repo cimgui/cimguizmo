@@ -35,6 +35,7 @@
       }
     ]
   },
+  "enumtypes": [],
   "locations": {
     "MODE": "ImGuizmo:174",
     "OPERATION": "ImGuizmo:166"

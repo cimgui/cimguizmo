@@ -26,6 +26,7 @@ defs["enums"]["OPERATION"][4] = {}
 defs["enums"]["OPERATION"][4]["calc_value"] = 3
 defs["enums"]["OPERATION"][4]["name"] = "BOUNDS"
 defs["enums"]["OPERATION"][4]["value"] = "3"
+defs["enumtypes"] = {}
 defs["locations"] = {}
 defs["locations"]["MODE"] = "ImGuizmo:174"
 defs["locations"]["OPERATION"] = "ImGuizmo:166"
