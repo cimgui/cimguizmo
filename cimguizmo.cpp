@@ -75,6 +75,10 @@ CIMGUI_API void ImGuizmo_SetGizmoSizeClipSpace(float value)
 {
     return ImGuizmo::SetGizmoSizeClipSpace(value);
 }
+CIMGUI_API void ImGuizmo_AllowAxisFlip(bool value)
+{
+    return ImGuizmo::AllowAxisFlip(value);
+}
 
 
 

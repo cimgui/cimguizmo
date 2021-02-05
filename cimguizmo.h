@@ -43,10 +43,20 @@ typedef unsigned __int64 ImU64;
 #ifdef CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 
 typedef enum {
-      TRANSLATE,
-      ROTATE,
-      SCALE,
-      BOUNDS,
+      TRANSLATE_X = (1u << 0),
+      TRANSLATE_Y = (1u << 1),
+      TRANSLATE_Z = (1u << 2),
+      ROTATE_X = (1u << 3),
+      ROTATE_Y = (1u << 4),
+      ROTATE_Z = (1u << 5),
+      ROTATE_SCREEN = (1u << 6),
+      SCALE_X = (1u << 7),
+      SCALE_Y = (1u << 8),
+      SCALE_Z = (1u << 9),
+      BOUNDS = (1u << 10),
+      TRANSLATE = TRANSLATE_X | TRANSLATE_Y | TRANSLATE_Z,
+      ROTATE = ROTATE_X | ROTATE_Y | ROTATE_Z | ROTATE_SCREEN,
+      SCALE = SCALE_X | SCALE_Y | SCALE_Z
    }OPERATION;
 typedef enum {
       LOCAL,
@@ -76,6 +86,7 @@ CIMGUI_API void ImGuizmo_ViewManipulate(float* view,float length,ImVec2 position
 CIMGUI_API void ImGuizmo_SetID(int id);
 CIMGUI_API bool ImGuizmo_IsOverOPERATION(OPERATION op);
 CIMGUI_API void ImGuizmo_SetGizmoSizeClipSpace(float value);
+CIMGUI_API void ImGuizmo_AllowAxisFlip(bool value);
 
 
 

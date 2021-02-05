@@ -1,4 +1,26 @@
 {
+  "ImGuizmo_AllowAxisFlip": [
+    {
+      "args": "(bool value)",
+      "argsT": [
+        {
+          "name": "value",
+          "type": "bool"
+        }
+      ],
+      "argsoriginal": "(bool value)",
+      "call_args": "(value)",
+      "cimguiname": "ImGuizmo_AllowAxisFlip",
+      "defaults": {},
+      "funcname": "AllowAxisFlip",
+      "location": "ImGuizmo:212",
+      "namespace": "ImGuizmo",
+      "ov_cimguiname": "ImGuizmo_AllowAxisFlip",
+      "ret": "void",
+      "signature": "(bool)",
+      "stname": ""
+    }
+  ],
   "ImGuizmo_BeginFrame": [
     {
       "args": "()",
@@ -169,7 +191,7 @@
       "cimguiname": "ImGuizmo_IsOver",
       "defaults": {},
       "funcname": "IsOver",
-      "location": "ImGuizmo:191",
+      "location": "ImGuizmo:206",
       "namespace": "ImGuizmo",
       "ov_cimguiname": "ImGuizmo_IsOverOPERATION",
       "ret": "bool",
@@ -245,7 +267,7 @@
         "snap": "NULL"
       },
       "funcname": "Manipulate",
-      "location": "ImGuizmo:180",
+      "location": "ImGuizmo:195",
       "namespace": "ImGuizmo",
       "ov_cimguiname": "ImGuizmo_Manipulate",
       "ret": "bool",
@@ -325,7 +347,7 @@
       "cimguiname": "ImGuizmo_SetGizmoSizeClipSpace",
       "defaults": {},
       "funcname": "SetGizmoSizeClipSpace",
-      "location": "ImGuizmo:192",
+      "location": "ImGuizmo:207",
       "namespace": "ImGuizmo",
       "ov_cimguiname": "ImGuizmo_SetGizmoSizeClipSpace",
       "ret": "void",
@@ -347,7 +369,7 @@
       "cimguiname": "ImGuizmo_SetID",
       "defaults": {},
       "funcname": "SetID",
-      "location": "ImGuizmo:188",
+      "location": "ImGuizmo:203",
       "namespace": "ImGuizmo",
       "ov_cimguiname": "ImGuizmo_SetID",
       "ret": "void",
@@ -463,7 +485,7 @@
       "cimguiname": "ImGuizmo_ViewManipulate",
       "defaults": {},
       "funcname": "ViewManipulate",
-      "location": "ImGuizmo:186",
+      "location": "ImGuizmo:201",
       "namespace": "ImGuizmo",
       "ov_cimguiname": "ImGuizmo_ViewManipulate",
       "ret": "void",
