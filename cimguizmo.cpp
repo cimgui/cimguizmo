@@ -19,7 +19,7 @@ CIMGUI_API void ImGuizmo_SetImGuiContext(ImGuiContext* ctx)
 {
     return ImGuizmo::SetImGuiContext(ctx);
 }
-CIMGUI_API bool ImGuizmo_IsOverNil()
+CIMGUI_API bool ImGuizmo_IsOver_Nil()
 {
     return ImGuizmo::IsOver();
 }
@@ -67,7 +67,7 @@ CIMGUI_API void ImGuizmo_SetID(int id)
 {
     return ImGuizmo::SetID(id);
 }
-CIMGUI_API bool ImGuizmo_IsOverOPERATION(OPERATION op)
+CIMGUI_API bool ImGuizmo_IsOver_OPERATION(OPERATION op)
 {
     return ImGuizmo::IsOver(op);
 }
