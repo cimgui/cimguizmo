@@ -69,6 +69,21 @@
         "value": "(1u << 10)"
       },
       {
+        "calc_value": 2048,
+        "name": "SCALE_XU",
+        "value": "(1u << 11)"
+      },
+      {
+        "calc_value": 4096,
+        "name": "SCALE_YU",
+        "value": "(1u << 12)"
+      },
+      {
+        "calc_value": 8192,
+        "name": "SCALE_ZU",
+        "value": "(1u << 13)"
+      },
+      {
         "calc_value": 7,
         "name": "TRANSLATE",
         "value": "TRANSLATE_X | TRANSLATE_Y | TRANSLATE_Z"
@@ -82,12 +97,22 @@
         "calc_value": 896,
         "name": "SCALE",
         "value": "SCALE_X | SCALE_Y | SCALE_Z"
+      },
+      {
+        "calc_value": 14336,
+        "name": "SCALEU",
+        "value": "SCALE_XU | SCALE_YU | SCALE_ZU"
+      },
+      {
+        "calc_value": 14463,
+        "name": "UNIVERSAL",
+        "value": "TRANSLATE | ROTATE | SCALEU"
       }
     ]
   },
   "enumtypes": [],
   "locations": {
-    "MODE": "ImGuizmo:189",
+    "MODE": "ImGuizmo:195",
     "OPERATION": "ImGuizmo:166"
   },
   "structs": []
