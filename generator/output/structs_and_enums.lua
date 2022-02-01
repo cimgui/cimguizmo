@@ -88,8 +88,8 @@ defs["enums"]["OPERATION"][19]["name"] = "UNIVERSAL"
 defs["enums"]["OPERATION"][19]["value"] = "TRANSLATE | ROTATE | SCALEU"
 defs["enumtypes"] = {}
 defs["locations"] = {}
-defs["locations"]["MODE"] = "ImGuizmo:195"
-defs["locations"]["OPERATION"] = "ImGuizmo:166"
+defs["locations"]["MODE"] = "ImGuizmo:199"
+defs["locations"]["OPERATION"] = "ImGuizmo:170"
 defs["structs"] = {}
 
 return defs
