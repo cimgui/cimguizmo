@@ -13,7 +13,7 @@
       "cimguiname": "ImGuizmo_AllowAxisFlip",
       "defaults": {},
       "funcname": "AllowAxisFlip",
-      "location": "ImGuizmo:222",
+      "location": "ImGuizmo:225",
       "namespace": "ImGuizmo",
       "ov_cimguiname": "ImGuizmo_AllowAxisFlip",
       "ret": "void",
@@ -162,6 +162,24 @@
       "stname": ""
     }
   ],
+  "ImGuizmo_GetStyle": [
+    {
+      "args": "()",
+      "argsT": [],
+      "argsoriginal": "()",
+      "call_args": "()",
+      "cimguiname": "ImGuizmo_GetStyle",
+      "defaults": {},
+      "funcname": "GetStyle",
+      "location": "ImGuizmo:263",
+      "namespace": "ImGuizmo",
+      "ov_cimguiname": "ImGuizmo_GetStyle",
+      "ret": "Style*",
+      "retref": "&",
+      "signature": "()",
+      "stname": ""
+    }
+  ],
   "ImGuizmo_IsOver": [
     {
       "args": "()",
@@ -191,7 +209,7 @@
       "cimguiname": "ImGuizmo_IsOver",
       "defaults": {},
       "funcname": "IsOver",
-      "location": "ImGuizmo:216",
+      "location": "ImGuizmo:219",
       "namespace": "ImGuizmo",
       "ov_cimguiname": "ImGuizmo_IsOver_OPERATION",
       "ret": "bool",
@@ -347,7 +365,7 @@
       "cimguiname": "ImGuizmo_SetGizmoSizeClipSpace",
       "defaults": {},
       "funcname": "SetGizmoSizeClipSpace",
-      "location": "ImGuizmo:217",
+      "location": "ImGuizmo:220",
       "namespace": "ImGuizmo",
       "ov_cimguiname": "ImGuizmo_SetGizmoSizeClipSpace",
       "ret": "void",
@@ -369,7 +387,7 @@
       "cimguiname": "ImGuizmo_SetID",
       "defaults": {},
       "funcname": "SetID",
-      "location": "ImGuizmo:213",
+      "location": "ImGuizmo:216",
       "namespace": "ImGuizmo",
       "ov_cimguiname": "ImGuizmo_SetID",
       "ret": "void",
@@ -487,10 +505,97 @@
       "funcname": "ViewManipulate",
       "location": "ImGuizmo:211",
       "namespace": "ImGuizmo",
-      "ov_cimguiname": "ImGuizmo_ViewManipulate",
+      "ov_cimguiname": "ImGuizmo_ViewManipulate_Float",
       "ret": "void",
       "signature": "(float*,float,ImVec2,ImVec2,ImU32)",
       "stname": ""
+    },
+    {
+      "args": "(float* view,const float* projection,OPERATION operation,MODE mode,float* matrix,float length,ImVec2 position,ImVec2 size,ImU32 backgroundColor)",
+      "argsT": [
+        {
+          "name": "view",
+          "type": "float*"
+        },
+        {
+          "name": "projection",
+          "type": "const float*"
+        },
+        {
+          "name": "operation",
+          "type": "OPERATION"
+        },
+        {
+          "name": "mode",
+          "type": "MODE"
+        },
+        {
+          "name": "matrix",
+          "type": "float*"
+        },
+        {
+          "name": "length",
+          "type": "float"
+        },
+        {
+          "name": "position",
+          "type": "ImVec2"
+        },
+        {
+          "name": "size",
+          "type": "ImVec2"
+        },
+        {
+          "name": "backgroundColor",
+          "type": "ImU32"
+        }
+      ],
+      "argsoriginal": "(float* view,const float* projection,OPERATION operation,MODE mode,float* matrix,float length,ImVec2 position,ImVec2 size,ImU32 backgroundColor)",
+      "call_args": "(view,projection,operation,mode,matrix,length,position,size,backgroundColor)",
+      "cimguiname": "ImGuizmo_ViewManipulate",
+      "defaults": {},
+      "funcname": "ViewManipulate",
+      "location": "ImGuizmo:214",
+      "namespace": "ImGuizmo",
+      "ov_cimguiname": "ImGuizmo_ViewManipulate_FloatPtr",
+      "ret": "void",
+      "signature": "(float*,const float*,OPERATION,MODE,float*,float,ImVec2,ImVec2,ImU32)",
+      "stname": ""
+    }
+  ],
+  "Style_Style": [
+    {
+      "args": "()",
+      "argsT": [],
+      "argsoriginal": "()",
+      "call_args": "()",
+      "cimguiname": "Style_Style",
+      "constructor": true,
+      "defaults": {},
+      "funcname": "Style",
+      "location": "ImGuizmo:249",
+      "ov_cimguiname": "Style_Style",
+      "signature": "()",
+      "stname": "Style"
+    }
+  ],
+  "Style_destroy": [
+    {
+      "args": "(Style* self)",
+      "argsT": [
+        {
+          "name": "self",
+          "type": "Style*"
+        }
+      ],
+      "call_args": "(self)",
+      "cimguiname": "Style_destroy",
+      "defaults": {},
+      "destructor": true,
+      "ov_cimguiname": "Style_destroy",
+      "ret": "void",
+      "signature": "(Style*)",
+      "stname": "Style"
     }
   ]
 }
