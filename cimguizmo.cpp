@@ -27,6 +27,10 @@ CIMGUI_API bool ImGuizmo_IsUsing()
 {
     return ImGuizmo::IsUsing();
 }
+CIMGUI_API bool ImGuizmo_IsUsingAny()
+{
+    return ImGuizmo::IsUsingAny();
+}
 CIMGUI_API void ImGuizmo_Enable(bool enable)
 {
     return ImGuizmo::Enable(enable);
@@ -82,6 +86,14 @@ CIMGUI_API void ImGuizmo_SetGizmoSizeClipSpace(float value)
 CIMGUI_API void ImGuizmo_AllowAxisFlip(bool value)
 {
     return ImGuizmo::AllowAxisFlip(value);
+}
+CIMGUI_API void ImGuizmo_SetAxisLimit(float value)
+{
+    return ImGuizmo::SetAxisLimit(value);
+}
+CIMGUI_API void ImGuizmo_SetPlaneLimit(float value)
+{
+    return ImGuizmo::SetPlaneLimit(value);
 }
 CIMGUI_API Style* Style_Style(void)
 {
