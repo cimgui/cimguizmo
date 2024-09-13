@@ -8,7 +8,7 @@ local script_args = {...}
 local COMPILER = script_args[1]
 
 local CPRE,CTEST
-if COMPILER == "gcc" or COMPILER == "clang" then
+if COMPILER == "gcc" or COMPILER == "g++" or COMPILER == "clang" then
     CPRE = COMPILER..[[ -E -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS -DIMGUI_API="" -DIMGUI_IMPL_API="" ]]
     CTEST = COMPILER.." --version"
 elseif COMPILER == "cl" then
@@ -138,7 +138,7 @@ local function parseImGuiHeader(header,names)
 	
 	local include_cmd = COMPILER=="cl" and [[ /I ]] or [[ -I ]]
 	local extra_includes = include_cmd.." ../../cimgui/imgui "
-	
+
 	parser:take_lines(CPRE..extra_includes..header, names, COMPILER)
 	
 	return parser
@@ -146,7 +146,15 @@ end
 --generation
 print("------------------generation with "..COMPILER.."------------------------")
 local modulename = "cimguizmo"
-local parser1 = parseImGuiHeader([[../ImGuizmo/ImGuizmo.h]],{[[ImGuizmo]]})
+
+local headerst = [[#include "../ImGuizmo/ImGuizmo.h"
+]]
+--headerst = headerst .. [[#include "../ImGuizmo/GraphEditor.h"
+--]]
+save_data("headers.h",headerst)
+local parser1 = parseImGuiHeader([[headers.h]],{[[ImGuizmo]],[[GraphEditor]]})
+os.remove("headers.h")
+
 parser1:do_parse()
 
 save_data("./output/overloads.txt",parser1.overloadstxt)
