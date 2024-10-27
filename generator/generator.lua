@@ -135,6 +135,8 @@ local function parseImGuiHeader(header,names)
 	parser.cname_overloads = cimgui_overloads
 	parser.manuals = cimgui_manuals
 	parser.UDTs = {"ImVec2","ImVec4","ImColor","ImRect"}--,"ImPlotPoint","ImPlotLimits"}
+	--ParseItems cleaning of c++ attributes
+	parser.str_subst = {["%[%[[^%[%]]+%]%]"] = ""}
 	
 	local include_cmd = COMPILER=="cl" and [[ /I ]] or [[ -I ]]
 	local extra_includes = include_cmd.." ../../cimgui/imgui "
