@@ -6,7 +6,7 @@ assert(_VERSION=='Lua 5.1',"Must use LuaJIT")
 assert(bit,"Must use LuaJIT")
 local script_args = {...}
 local COMPILER = script_args[1]
-
+local COMMENTS_GENERATION = script_args[2]:match("comments") and true or false
 local CPRE,CTEST
 if COMPILER == "gcc" or COMPILER == "g++" or COMPILER == "clang" then
     CPRE = COMPILER..[[ -E -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS -DIMGUI_API="" -DIMGUI_IMPL_API="" ]]
@@ -39,7 +39,7 @@ assert(HAVE_COMPILER,"gcc, clang or cl needed to run script")
 
 
 print("HAVE_COMPILER",HAVE_COMPILER)
-
+print("COMMENTS_GENERATION",COMMENTS_GENERATION)
 --------------------------------------------------------------------------
 --this table has the functions to be skipped in generation
 --------------------------------------------------------------------------
@@ -137,7 +137,7 @@ local function parseImGuiHeader(header,names)
 	parser.UDTs = {"ImVec2","ImVec4","ImColor","ImRect"}--,"ImPlotPoint","ImPlotLimits"}
 	--ParseItems cleaning of c++ attributes
 	parser.str_subst = {["%[%[[^%[%]]+%]%]"] = ""}
-	
+	parser.COMMENTS_GENERATION = COMMENTS_GENERATION
 	local include_cmd = COMPILER=="cl" and [[ /I ]] or [[ -I ]]
 	local extra_includes = include_cmd.." ../../cimgui/imgui "
 

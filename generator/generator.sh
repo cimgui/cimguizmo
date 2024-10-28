@@ -10,5 +10,6 @@
 # impl_definitions.lua for implementation function definitions
 
 #process  files
-# arg[1] compiler name gcc, clang, or cl
-luajit ./generator.lua gcc
+# arg[1] compiler name g++, gcc, clang, or cl
+# arg[2] "" or "comments"
+luajit ./generator.lua gcc ""
