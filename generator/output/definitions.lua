@@ -787,6 +787,7 @@ defs["Style_destroy"][1]["call_args"] = "(self)"
 defs["Style_destroy"][1]["cimguiname"] = "Style_destroy"
 defs["Style_destroy"][1]["defaults"] = {}
 defs["Style_destroy"][1]["destructor"] = true
+defs["Style_destroy"][1]["location"] = "ImGuizmo:289"
 defs["Style_destroy"][1]["ov_cimguiname"] = "Style_destroy"
 defs["Style_destroy"][1]["ret"] = "void"
 defs["Style_destroy"][1]["signature"] = "(Style*)"
