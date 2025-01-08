@@ -199,6 +199,9 @@
     "OPERATION": "ImGuizmo:180",
     "Style": "ImGuizmo:289"
   },
+  "nonPOD": {
+    "Style": true
+  },
   "structs": {
     "Style": [
       {
