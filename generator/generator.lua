@@ -91,6 +91,7 @@ local function cimgui_generation(parser,name)
 	local cstructsstr = outpre..outpost 
 
     hstrfile = hstrfile:gsub([[#include "imgui_structs%.h"]],cstructsstr)
+	hstrfile = hstrfile:gsub([[PLACE_STRUCTS_C]],parser:gen_structs_c())
     local cfuncsstr = func_header_generate(parser)
     hstrfile = hstrfile:gsub([[#include "auto_funcs%.h"]],cfuncsstr)
     save_data("./output/"..name..".h",cimgui_header,hstrfile)
@@ -135,6 +136,7 @@ local function parseImGuiHeader(header,names)
 	parser.cname_overloads = cimgui_overloads
 	parser.manuals = cimgui_manuals
 	parser.UDTs = {"ImVec2","ImVec4","ImColor","ImRect"}--,"ImPlotPoint","ImPlotLimits"}
+	parser.cimgui_inherited =  dofile([[../../cimgui/generator/output/structs_and_enums.lua]])
 	--ParseItems cleaning of c++ attributes
 	parser.str_subst = {["%[%[[^%[%]]+%]%]"] = ""}
 	parser.COMMENTS_GENERATION = COMMENTS_GENERATION
