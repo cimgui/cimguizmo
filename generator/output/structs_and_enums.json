@@ -293,6 +293,9 @@
     "ImVector": "inherited",
     "Style": true
   },
+  "nonPOD_used": {
+    "ImVec2": "inherited"
+  },
   "structs": {
     "Style": [
       {
