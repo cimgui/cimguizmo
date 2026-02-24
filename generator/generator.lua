@@ -9,10 +9,10 @@ local COMPILER = script_args[1]
 local COMMENTS_GENERATION = script_args[2]:match("comments") and true or false
 local CPRE,CTEST
 if COMPILER == "gcc" or COMPILER == "g++" or COMPILER == "clang" then
-    CPRE = COMPILER..[[ -E -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS -DIMGUI_API="" -DIMGUI_IMPL_API="" ]]
+    CPRE = COMPILER..[[ -E -dD -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS -DIMGUI_API="" -DIMGUI_IMPL_API="" ]]
     CTEST = COMPILER.." --version"
 elseif COMPILER == "cl" then
-    CPRE = COMPILER..[[ /E /DIMGUI_DISABLE_OBSOLETE_FUNCTIONS /DIMGUI_API="" /DIMGUI_IMPL_API="" ]]
+    CPRE = COMPILER..[[ /E /d1PP /DIMGUI_DISABLE_OBSOLETE_FUNCTIONS /DIMGUI_API="" /DIMGUI_IMPL_API="" ]]
     CTEST = COMPILER
 else
     print("Working without compiler ")
