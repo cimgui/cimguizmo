@@ -253,6 +253,7 @@ local t={
     Style=true},
   nonPOD_used={
     ImVec2="inherited"},
+  opaque_structs={},
   structs={
     Style={
       [1]={

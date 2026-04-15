@@ -825,6 +825,7 @@ local t={
       defaults={},
       funcname="Style",
       location="ImGuizmo:291",
+      namespace="ImGuizmo::Style",
       ov_cimguiname="Style_Style",
       signature="()",
       stname="Style"},
