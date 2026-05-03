@@ -46,7 +46,7 @@ local cimgui_header =
 -----------------------------do it----------------------
 --------------------------------------------------------
 --get implot.h version--------------------------
-local pipe,err = io.open("../ImGuizmo/ImGuizmo.h","r")
+local pipe,err = io.open("../ImGuizmo/src/ImGuizmo.h","r")
 if not pipe then
     error("could not open file:"..err)
 end
@@ -88,7 +88,7 @@ end
 print("------------------generation with "..COMPILER.."------------------------")
 local modulename = "cimguizmo"
 
-local headerst = [[#include "../ImGuizmo/ImGuizmo.h"
+local headerst = [[#include "../ImGuizmo/src/ImGuizmo.h"
 ]]
 --headerst = headerst .. [[#include "../ImGuizmo/GraphEditor.h"
 --]]

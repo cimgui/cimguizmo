@@ -194,10 +194,10 @@
   },
   "enumtypes": [],
   "locations": {
-    "COLOR": "ImGuizmo:269",
-    "MODE": "ImGuizmo:209",
-    "OPERATION": "ImGuizmo:180",
-    "Style": "ImGuizmo:289"
+    "COLOR": "ImGuizmo:276",
+    "MODE": "ImGuizmo:216",
+    "OPERATION": "ImGuizmo:187",
+    "Style": "ImGuizmo:296"
   },
   "nonPOD": {
     "ImBitArray": "inherited",
