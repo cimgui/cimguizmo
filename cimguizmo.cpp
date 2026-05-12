@@ -152,6 +152,22 @@ CIMGUI_API void ImGuizmo_SetGizmoSizeClipSpace(float value)
 {
     return ImGuizmo::SetGizmoSizeClipSpace(value);
 }
+CIMGUI_API MOVETYPE ImGuizmo_GetActiveHandleType()
+{
+    return ImGuizmo::GetActiveHandleType();
+}
+CIMGUI_API MOVETYPE ImGuizmo_GetHoveredHandleType()
+{
+    return ImGuizmo::GetHoveredHandleType();
+}
+CIMGUI_API MOVETYPE ImGuizmo_GetActiveMoveType()
+{
+    return ImGuizmo::GetActiveMoveType();
+}
+CIMGUI_API MOVETYPE ImGuizmo_GetHoveredMoveType()
+{
+    return ImGuizmo::GetHoveredMoveType();
+}
 CIMGUI_API void ImGuizmo_AllowAxisFlip(bool value)
 {
     return ImGuizmo::AllowAxisFlip(value);

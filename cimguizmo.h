@@ -35,6 +35,24 @@ typedef enum {
       WORLD
    }MODE;
 typedef enum {
+      MT_NONE,
+      MT_MOVE_X,
+      MT_MOVE_Y,
+      MT_MOVE_Z,
+      MT_MOVE_YZ,
+      MT_MOVE_ZX,
+      MT_MOVE_XY,
+      MT_MOVE_SCREEN,
+      MT_ROTATE_X,
+      MT_ROTATE_Y,
+      MT_ROTATE_Z,
+      MT_ROTATE_SCREEN,
+      MT_SCALE_X,
+      MT_SCALE_Y,
+      MT_SCALE_Z,
+      MT_SCALE_XYZ
+   }MOVETYPE;
+typedef enum {
       DIRECTION_X,
       DIRECTION_Y,
       DIRECTION_Z,
@@ -76,6 +94,7 @@ struct Style
 typedef ImGuizmo::Style Style;
 typedef ImGuizmo::COLOR COLOR;
 typedef ImGuizmo::MODE MODE;
+typedef ImGuizmo::MOVETYPE MOVETYPE;
 typedef ImGuizmo::OPERATION OPERATION;
 #endif //CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 CIMGUI_API void ImGuizmo_SetDrawlist(ImDrawList* drawlist);
@@ -111,6 +130,10 @@ CIMGUI_API ImGuiID ImGuizmo_GetID_StrStr(const char* str_id_begin,const char* st
 CIMGUI_API ImGuiID ImGuizmo_GetID_Ptr(const void* ptr_id);
 CIMGUI_API bool ImGuizmo_IsOver_OPERATION(OPERATION op);
 CIMGUI_API void ImGuizmo_SetGizmoSizeClipSpace(float value);
+CIMGUI_API MOVETYPE ImGuizmo_GetActiveHandleType(void);
+CIMGUI_API MOVETYPE ImGuizmo_GetHoveredHandleType(void);
+CIMGUI_API MOVETYPE ImGuizmo_GetActiveMoveType(void);
+CIMGUI_API MOVETYPE ImGuizmo_GetHoveredMoveType(void);
 CIMGUI_API void ImGuizmo_AllowAxisFlip(bool value);
 CIMGUI_API void ImGuizmo_SetAxisLimit(float value);
 CIMGUI_API void ImGuizmo_SetAxisMask(bool x,bool y,bool z);
